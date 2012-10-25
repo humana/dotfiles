@@ -19,7 +19,7 @@ mv ~/.gitconfig bak/
 if [ ! -d ~/.vim ]; then
 	mkdir ~/.vim
 fi
-mv ~/.dotfiles/bundle ~/.vim/
+cp ~/.dotfiles/bundle ~/.vim/
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 vim +BundleInstall +qall
 
