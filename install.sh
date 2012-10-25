@@ -31,7 +31,7 @@ ln -s bashrc ~/.bashrc
 ln -s bash_profile ~/.bash_profile
 
 # gtk
-if [ ! -d ~/.config/gtk-3.0 ]
+if [ ! -d ~/.config/gtk-3.0 ]; then
 	mkdir -p ~/.config/gtk-3.0
 fi
 cp misc/gtk.css ~/.config/gtk-3.0/
