@@ -97,7 +97,7 @@ PS1+="${style_chars}${prompt_char} \[${RESET}\]" # $ (and reset color)
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-	eval `dircolors ~/dotfiles/dircolors-solarized/dircolors.ansi-dark`
+	eval `dircolors ~/.dotfiles/solarized/dircolors/dircolors.ansi-dark`
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -135,11 +135,6 @@ alias gh='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
-git config --global user.name "humana"
-git config --global user.email "aniello.human@gmail.com"
-git config --global color.ui true
-git config --global core.editor vim
-git config --global cache.timeout 3600
 
 # maven
 MAVEN_HOME=/usr/share/maven3
