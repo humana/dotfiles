@@ -19,16 +19,16 @@ mv ~/.gitconfig bak/
 if [ ! -d ~/.vim ]; then
 	mkdir ~/.vim
 fi
-ln -s bundle ~/.vim/bundle
-ln -s vimrc ~/.vimrc
+ln -s ~/.dotfiles/bundle ~/.vim/bundle
+ln -s ~/.dotfiles/vimrc ~/.vimrc
 vim +BundleInstall +qall
 
 # git
-ln -s gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
 # bash
-ln -s bashrc ~/.bashrc
-ln -s bash_profile ~/.bash_profile
+ln -s ~/.dotfiles/bashrc ~/.bashrc
+ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 
 # gtk
 if [ ! -d ~/.config/gtk-3.0 ]; then
