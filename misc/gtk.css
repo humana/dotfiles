@@ -1,0 +1,8 @@
+// put this into ~/.config/gtk-3.0 to fix MC F10 bug
+@binding-set NoKeyboardNavigation {
+	unbind "<shift>F10"
+}
+
+* {
+ gtk-key-bindings: NoKeyboardNavigation
+}
