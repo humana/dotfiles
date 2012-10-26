@@ -36,3 +36,5 @@ if [ ! -d ~/.config/gtk-3.0 ]; then
 fi
 cp misc/gtk.css ~/.config/gtk-3.0/
 
+# tmux
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
