@@ -165,6 +165,7 @@ fi
 # bash completion
 [[ $PS1 && -f ~/.dotfiles/bash-completion/bash_completion.sh ]] && \
 	. ~/.dotfiles/bash-completion/bash_completion.sh
+. ~/.dotfiles/misc/git-completion.bash
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
