@@ -86,14 +86,16 @@ function prompt_git() {
 	echo -ne "${SOLAR_WHITE} ${style_branch}${output}"
 }
 
+# apparently bash has problems calling functions inside the PS1
+PROMPT_GIT=$(prompt_git)
 PS1=""
 PS1+="${style_user}\u" # Username
 PS1+="${style_chars}@" # @
 PS1+="${style_host}\h" # Host
 PS1+="${style_chars} " # :
 PS1+="${style_path}\w" # Working directory
-PS1+="\$(prompt_git)" # Git details
-PS1+="${style_chars}${prompt_char} \[${RESET}\]" # $ (and reset color)
+#PS1+="\[\$(prompt_git)\]" # Git details
+PS1+="${style_chars} ${prompt_char} \[${RESET}\]" # $ (and reset color)
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
