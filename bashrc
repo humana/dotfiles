@@ -27,7 +27,7 @@ shopt -s checkwinsize
 
 # Check that terminfo exists before changing TERM var to xterm-256color
 # Prevents prompt flashing in Mac OS X 10.6 Terminal.app
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+if [ -e /usr/share/terminfo/x/xterm-256color  ] || [ -e ~/.terminfo/x/xterm-256color ]; then
 	export TERM='xterm-256color'
 else  
 	export TERM='xterm'
