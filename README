@@ -1,3 +1,8 @@
 git clone http://humana@github.com/humana/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
+
+
+On systems where xterm-256colors is not available:
+	copy misc/xterm-256color.ti to remote host
+	on remote host run: tic xterm-256color.ti to generate to ~/.terminfo

@@ -133,6 +133,7 @@ alias ll='ls -alF'
 alias lh='ls -ltrah'
 alias l='ls -ltr'
 alias ssh='TERM=xterm ssh '
+alias sshx='TERM=xterm-256color ssh '
 
 # git
 alias gs='git status '
