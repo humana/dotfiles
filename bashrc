@@ -166,6 +166,8 @@ export ORACLE_HOME=~/opt/instantclient_11_2
 export PATH=$PATH:$ORACLE_HOME
 export LD_LIBRARY_PATH=$ORACLE_HOME
 
+LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
+PATH=$LATEX_HOME:$PATH
 
 # local alias
 if [ -f ~/.bash_aliases ]; then

@@ -1,0 +1,63 @@
+
+o fetch branch from remote repo and check what difference without merging
+
+	alice$ git fetch /home/bob/myrepo master
+	alice$ git log -p HEAD..FETCH_HEAD
+
+or
+
+	if you added a remote repository shorthand
+	alice$ git add bob /home/bob/myrepo
+	alice$ git fetch bob
+	alice$ git log -p master..bob/master
+
+o to see diff of what was commmited at a specific commit in history
+
+gh to show history
+git show 1231aasdf3 hash to show details about a specific commit
+
+
+o git diff
+            diff-tree
+             +----+
+             |    |
+             |    |
+             V    V
+          +-----------+
+          | Object DB |
+          |  Backing  |
+          |   Store   |
+          +-----------+
+            ^    ^
+            |    |
+            |    |  diff-index --cached
+            |    |
+diff-index  |    V
+            |  +-----------+
+            |  |   Index   |
+            |  |  "cache"  |
+            |  +-----------+
+            |    ^
+            |    |
+            |    |  diff-files
+            |    |
+            V    V
+          +-----------+
+          |  Working  |
+          | Directory |
+          +-----------+
+
+o creating a branch
+
+	git branch branchname [hash]
+	git checkout branchname
+or
+	git checkout -b branchname [hash] to automatically branch and checkout
+
+o stashing - pushes modified tracked files and staged changes onto a stack
+	git stash
+	git stash list
+	git stash apply [stash@{2}] - does not re-add to the index
+	git stash apply --index - tries to re-add to the index
+	git stash drop - when done applying to pop off stack
+	git stash branch <testchanges> tries to re-apply stashed changes (auto-merge) and deletes off stash stack if successful
