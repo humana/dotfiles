@@ -15,6 +15,8 @@ Bundle 'http://github.com/vim-scripts/buftabs.git'
 Bundle 'http://github.com/altercation/vim-colors-solarized.git'
 Bundle 'http://github.com/Lokaltog/vim-powerline'
 Bundle 'http://github.com/othree/xml.vim'
+Bundle 'http://github.com/scrooloose/syntastic.git'
+Bundle 'http://github.com/tpope/vim-fugitive.git'
 
 filetype plugin indent on " required
 
@@ -53,6 +55,9 @@ set cscopetag " use :cstag for lookups, uses ctags and cscope databases
 " disabled for powerline
 " set statusline=%F\ %m%r\%h\%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
 set laststatus=2 " enable statusline
+set encoding=utf-8
+let g:Powerline_symbols = 'unicode'
+let g:Powerline_colorscheme = 'solarized16'
 
 "set grepprg=ack-grep\ --cpp\ --cc\ --perl\ --python\ --make
 set grepprg=ack-grep
@@ -64,8 +69,8 @@ set grepprg=ack-grep
 :map <F6> :cnext<CR>
 
 " buftabs
-nnoremap <f1> :bprev<CR>
-nnoremap <f2> :bnext<CR>
+nnoremap <C-n> :bprev<CR>
+nnoremap <C-p> :bnext<CR>
 
 " NERDTree
 :imap <F4> <ESC>:NERDTreeToggle<CR>
@@ -84,6 +89,10 @@ map <C-L> <C-W>l
 " set cwd to current buffer path
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
+" when moving up/down, don't line-wrap 
+:nmap j gj
+:nmap k gk
+
 noremap H ^
 noremap L $
 set ignorecase
@@ -98,4 +107,10 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+
+" might come in useful, reformatting code with weird tab/spacing
+":nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+":nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
+":nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
+":nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
