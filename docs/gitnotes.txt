@@ -1,0 +1,103 @@
+
+o fetch branch from remote repo and check what difference without merging
+
+	alice$ git fetch /home/bob/myrepo master
+	alice$ git log -p HEAD..FETCH_HEAD
+
+or
+
+	if you added a remote repository shorthand
+	alice$ git add bob /home/bob/myrepo
+	alice$ git fetch bob
+	alice$ git log -p master..bob/master
+
+o to see diff of what was commmited at a specific commit in history
+
+gh to show history
+git show 1231aasdf3 hash to show details about a specific commit
+
+
+o git diff
+            diff-tree
+             +----+
+             |    |
+             |    |
+             V    V
+          +-----------+
+          | Object DB |
+          |  Backing  |
+          |   Store   |
+          +-----------+
+            ^    ^
+            |    |
+            |    |  diff-index --cached
+            |    |
+diff-index  |    V
+            |  +-----------+
+            |  |   Index   |
+            |  |  "cache"  |
+            |  +-----------+
+            |    ^
+            |    |
+            |    |  diff-files
+            |    |
+            V    V
+          +-----------+
+          |  Working  |
+          | Directory |
+          +-----------+
+
+o creating a branch
+
+	git branch branchname [hash]
+	git checkout branchname
+or
+	git checkout -b branchname [hash] to automatically branch and checkout
+
+o stashing - pushes modified tracked files and staged changes onto a stack
+	git stash
+	git stash list
+	git stash apply [stash@{2}] - does not re-add to the index
+	git stash apply --index - tries to re-add to the index
+	git stash drop - when done applying to pop off stack
+	git stash branch <testchanges> tries to re-apply stashed changes (auto-merge) and deletes off stash stack if successful
+
+name^  first parent of a commit
+       
+name^^ first parent's first parent of a commit
+          
+name^2 If a commit has multiple parents (such as a merge commit), you
+      can refer to the nth parent using name^n.
+
+name~10 A commit’s nth ancestor may be referenced using a tilde (~) fol-
+         lowed by the ordinal number
+
+name:path To reference a certain file within a commit’s content tree
+		$ git diff HEAD^1:Makefile HEAD^2:Makefile
+
+name^{tree}
+
+You can reference just the tree held by a commit, rather than the
+commit itself.
+
+
+$ git reset --soft HEAD^
+# backup HEAD to its parent,
+# effectively ignoring the last commit
+
+$ git reset --hard # Wipe out differences in the working tree from whatever HEAD currently is
+                     i.e. working tree comes what HEAD snapshot was
+
+
+# safe way of going back in time
+$ git stash
+$ git checkout -b new-branch HEAD~3
+# head back in time!
+$ git branch -D master # goodbye old master (still in reflog)
+$ git branch -m new-branch master # the new-branch is now my master
+
+# safe way of doing reset --hard
+$ git stash # because it's always a good thing to do
+$ git reset --hard HEAD~3 # go back in time
+$ git reset --hard HEAD@{1} # oops, that was a mistake, undo it!
+$ git stash apply # and bring back my working tree changes
