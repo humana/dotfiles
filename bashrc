@@ -161,6 +161,9 @@ PATH=$SCANBUILD:$SCANVIEW:$PATH
 # scala
 SBT_HOME=~/playpen/scala/sbt
 PATH=$SBT_HOME/bin:$PATH
+# racket
+RACKET_HOME=~/opt/racket
+PATH=$RACKET_HOME/bin:$PATH
 
 export ORACLE_HOME=~/opt/instantclient_11_2
 export PATH=$PATH:$ORACLE_HOME
