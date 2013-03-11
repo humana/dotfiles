@@ -11,6 +11,7 @@ if [ ! -d bak ]; then
 fi
 mv ~/.vim bak/
 mv ~/.vimrc bak/ 
+mv ~/.emacs bak/ 
 mv ~/.bashrc bak/
 mv ~/.bash_profile bak/
 mv ~/.gitconfig bak/
@@ -38,3 +39,7 @@ cp misc/gtk.css ~/.config/gtk-3.0/
 
 # tmux
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+
+# emacs
+ln -s ~/.dotfiles/emacs ~/.emacs
+
