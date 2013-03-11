@@ -1,5 +1,8 @@
+":so %
 set nocompatible
 filetype off
+set hidden
+let mapleader=","
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -114,4 +117,9 @@ nnoremap <right> <nop>
 ":nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 ":nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
+:nmap <leader>l :setlocal number!<CR>
+:nmap <leader>p :set paste!<CR>
+:nmap <leader>e :Errors<CR>
+
+":imap <tab> <C-P>
 
