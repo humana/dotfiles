@@ -98,7 +98,6 @@ export TERM='xterm'
 #PS1+="${style_chars} ${prompt_char} \[${RESET}\]" # $ (and reset color)
 #
 
-#if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then TERM=gnome-256color; fi
 if tput setaf 1 &> /dev/null; then
 tput sgr0
 if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
@@ -153,11 +152,16 @@ parse_git_dirty () {
 [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty) /"
 }
- 
-PS1="\[${CYAN}\]\u\[$BASE0\]@\[$CYAN\]\h \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]]) \[$YELLOW\](\$(parse_git_branch)\[$BASE0\]) \[$RESET\]\$ \[$RESET\]"
 
+style_user="\[${GREEN}\]"
+prompt_char="$"
+if [[ "$USER" == "root" ]]; then
+	style_user="\[${RED}\]"
+	prompt_char="#"
+fi
+PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]]) \[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]${prompt_char} \[$RESET\]"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -194,8 +198,6 @@ alias -- -="cd -"
 alias ll='ls -alF'
 alias lh='ls -ltrah'
 alias l='ls -ltr'
-alias ssh='TERM=xterm ssh '
-alias sshx='TERM=xterm-256color ssh '
 
 # git
 alias gs='git status '
