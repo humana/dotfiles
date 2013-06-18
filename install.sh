@@ -43,3 +43,10 @@ ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 # emacs
 ln -s ~/.dotfiles/emacs ~/.emacs
 
+#############
+# OPTIONAL
+#############
+# geiser
+if [ $OPTIONAL = 1 ]; then
+	git clone http://git.sv.gnu.org/r/geiser.git
+fi
