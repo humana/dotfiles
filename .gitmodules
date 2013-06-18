@@ -4,3 +4,6 @@
 [submodule "emacs.d/geiser"]
 	path = emacs.d/geiser
 	url = http://git.sv.gnu.org/r/geiser.git
+[submodule "emacs.d/evil"]
+	path = emacs.d/evil
+	url = https://git.gitorious.org/evil/evil.git

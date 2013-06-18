@@ -6,3 +6,12 @@ cd ~/.dotfiles
 On systems where xterm-256colors is not available:
 	copy misc/xterm-256color.ti to remote host
 	on remote host run: tic xterm-256color.ti to generate to ~/.terminfo
+
+
+Emacs
+~~~~~
+plugins - geiser, for scheme/racket integration
+
+evil - for vi layer on emacs
+	in doc directory there is a pdf
+	C-z to switch between vim/emacs states
