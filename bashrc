@@ -15,7 +15,6 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -31,7 +30,7 @@ shopt -s checkwinsize
 #else  
 #	export TERM='xterm'
 ##fi
-export TERM='xterm'
+#export TERM='xterm'
 #
 #tput sgr 0 0
 ## Solarized colors
@@ -251,3 +250,7 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
+fi

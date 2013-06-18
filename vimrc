@@ -20,6 +20,7 @@ Bundle 'http://github.com/Lokaltog/vim-powerline'
 Bundle 'http://github.com/othree/xml.vim'
 Bundle 'http://github.com/scrooloose/syntastic.git'
 Bundle 'http://github.com/tpope/vim-fugitive.git'
+Bundle 'http://github.com/kien/ctrlp.vim.git'
 
 filetype plugin indent on " required
 
@@ -64,20 +65,12 @@ let g:Powerline_colorscheme = 'solarized16'
 
 "set grepprg=ack-grep\ --cpp\ --cc\ --perl\ --python\ --make
 set grepprg=ack-grep
-:nmap _g :grep -n <C-R>=expand("<cword>")<CR><CR>
-:nmap _G :grep <C-R>=expand("<cword>")<CR><CR>
-" :cwindow to bring up quicfix window, navigation shortcuts below
-:map <F7> :botright cwindow<CR>
-:map <F5> :cprev<CR>
-:map <F6> :cnext<CR>
+:nmap <leader>g :grep -n <C-R>=expand("<cword>")<CR><CR>
+:nmap <leader>G :grep <C-R>=expand("<cword>")<CR><CR>
 
 " buftabs
 nnoremap <C-n> :bprev<CR>
 nnoremap <C-p> :bnext<CR>
-
-" NERDTree
-:imap <F4> <ESC>:NERDTreeToggle<CR>
-:map <F4> :NERDTreeToggle<CR>
 
 " keystrokes
 :nmap <Space> <PageDown>
@@ -120,6 +113,16 @@ nnoremap <right> <nop>
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
 :nmap <leader>e :Errors<CR>
+:nmap <leader>f :CtrlP<CR>
+:nmap <leader>n :NERDTreeToggle<CR>
 
-":imap <tab> <C-P>
+" :cwindow to bring up quicfix window, navigation shortcuts below
+:nmap <leader>qf :botright cwindow<CR>
+:nmap [q :cprev<CR>
+:nmap ]q :cnext<CR>
+:nmap [a :lprev<CR>
+:nmap ]a :lnext<CR>
+" locally remap for a specific buffer
+":autocmd BufReadPost quickfix nnoremap <buffer> <C-n> :cnext<CR>
+
 
