@@ -12,6 +12,7 @@ fi
 mv ~/.vim bak/
 mv ~/.vimrc bak/ 
 mv ~/.emacs bak/ 
+mv ~/.emacs.d bak/ 
 mv ~/.bashrc bak/
 mv ~/.bash_profile bak/
 mv ~/.gitconfig bak/
@@ -42,11 +43,5 @@ ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
 # emacs
 ln -s ~/.dotfiles/emacs ~/.emacs
+ln -s ~/.dotfiles/emacs.d ~/.emacs.d
 
-#############
-# OPTIONAL
-#############
-# geiser
-if [ $OPTIONAL = 1 ]; then
-	git clone http://git.sv.gnu.org/r/geiser.git
-fi
