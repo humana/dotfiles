@@ -32,3 +32,6 @@
 
 ; font size
 (set-default-font "consolas 14")
+
+; sane ctrl-h
+(define-key global-map "\C-h" 'backward-delete-char)
