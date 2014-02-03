@@ -35,3 +35,7 @@
 
 ; sane ctrl-h
 (define-key global-map "\C-h" 'backward-delete-char)
+
+; smooth-scrolling like vim
+(setq scroll-step             1
+       scroll-conservatively  10000)

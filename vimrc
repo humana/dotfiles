@@ -17,12 +17,14 @@ Bundle 'http://github.com/majutsushi/tagbar.git'
 Bundle 'http://github.com/vim-scripts/buftabs.git'
 Bundle 'http://github.com/altercation/vim-colors-solarized.git'
 Bundle 'http://github.com/Lokaltog/vim-powerline'
-Bundle 'http://github.com/othree/xml.vim'
-Bundle 'http://github.com/scrooloose/syntastic.git'
+"Bundle 'http://github.com/othree/xml.vim'
+"Bundle 'http://github.com/scrooloose/syntastic.git'
 Bundle 'http://github.com/tpope/vim-fugitive.git'
 Bundle 'http://github.com/kien/ctrlp.vim.git'
 
 filetype plugin indent on " required
+
+" set omnifunc=syntaxcomplete#Complete
 
 " solarized
 set t_Co=16 " some terminals seem to set this to 8, which breaks solarize
@@ -113,8 +115,11 @@ nnoremap <right> <nop>
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
 :nmap <leader>e :Errors<CR>
-:nmap <leader>f :CtrlP<CR>
+":nmap <leader>f :CtrlP<CR>
 :nmap <leader>n :NERDTreeToggle<CR>
+
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " :cwindow to bring up quicfix window, navigation shortcuts below
 :nmap <leader>qf :botright cwindow<CR>
