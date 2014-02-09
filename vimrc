@@ -16,6 +16,7 @@ Bundle 'http://github.com/corntrace/bufexplorer.git'
 Bundle 'http://github.com/majutsushi/tagbar.git'
 Bundle 'http://github.com/vim-scripts/buftabs.git'
 Bundle 'http://github.com/altercation/vim-colors-solarized.git'
+Bundle 'http://github.com/stephenmckinney/vim-solarized-powerline.git'
 Bundle 'http://github.com/Lokaltog/vim-powerline'
 "Bundle 'http://github.com/othree/xml.vim'
 "Bundle 'http://github.com/scrooloose/syntastic.git'
@@ -63,7 +64,7 @@ set cscopetag " use :cstag for lookups, uses ctags and cscope databases
 set laststatus=2 " enable statusline
 set encoding=utf-8
 let g:Powerline_symbols = 'unicode'
-let g:Powerline_colorscheme = 'solarized16'
+let g:Powerline_colorscheme = 'solarized16_dark'
 
 "set grepprg=ack-grep\ --cpp\ --cc\ --perl\ --python\ --make
 set grepprg=ack-grep

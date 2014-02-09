@@ -198,6 +198,8 @@ alias ll='ls -alF'
 alias lh='ls -ltrah'
 alias l='ls -ltr'
 
+alias diogenes=/usr/local/diogenes/perl/diogenes-server.pl
+
 # git
 alias gs='git status '
 alias ga='git add '
