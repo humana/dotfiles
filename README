@@ -8,8 +8,8 @@ On systems where xterm-256colors is not available:
 	on remote host run: tic xterm-256color.ti to generate to ~/.terminfo
 
 
-Emacs
-~~~~~
+Emacs (requires 24.3)
+~~~~~~~~~~~~
 plugins - geiser, for scheme/racket integration
 
 evil - for vi layer on emacs

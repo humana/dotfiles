@@ -13,3 +13,9 @@
 [submodule "emacs.d/powerline"]
 	path = emacs.d/powerline
 	url = http://github.com/Dewdrops/powerline
+[submodule "emacs.d/evil-leader"]
+	path = emacs.d/evil-leader
+	url = http://github.com/cofi/evil-leader
+[submodule "emacs.d/evil-surround"]
+	path = emacs.d/evil-surround
+	url = http://github.com/timcharper/evil-surround
