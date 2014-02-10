@@ -1,9 +1,15 @@
 [submodule "bundle/vundle"]
 	path = bundle/vundle
 	url = http://github.com/gmarik/vundle.git
+
 [submodule "emacs.d/geiser"]
 	path = emacs.d/geiser
 	url = http://git.sv.gnu.org/r/geiser.git
+
 [submodule "emacs.d/evil"]
 	path = emacs.d/evil
 	url = https://git.gitorious.org/evil/evil.git
+
+[submodule "emacs.d/powerline"]
+	path = emacs.d/powerline
+	url = http://github.com/Dewdrops/powerline

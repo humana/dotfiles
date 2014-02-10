@@ -10,6 +10,11 @@
 (require 'color-theme-solarized)
 (color-theme-solarized-dark)
 
+;;; ============= Powerline ====================
+(add-to-list 'load-path "~/.emacs.d/powerline")
+(require 'powerline)
+(powerline-center-evil-theme)
+
 ;;; ============= Geiser ==================
 (load-file "~/.emacs.d/geiser/elisp/geiser.el")
 
