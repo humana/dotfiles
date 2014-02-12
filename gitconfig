@@ -15,3 +15,5 @@
 	dump = cat-file -p
 [color]
 	ui = true
+
+        jummp

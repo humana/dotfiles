@@ -60,3 +60,12 @@
 
 ;;; ============= Helm =====================
 ;(helm-mode 1)
+;
+;
+
+; file extension preferences
+(setq ido-file-extensions-order '(".pl" ".java" ".js" ".txt" ".xml" ".el" ))
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
+
