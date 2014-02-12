@@ -43,5 +43,6 @@ ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
 # emacs prelude
 ln -s ~/.dotfiles/emacs/prelude ~/.emacs.d
-ln -s ~/.dotfiles/emacs/personal ~/.emacs.d/prelude/personal/
+rm -rf ~/.dotfiles/emacs/prelude/personal
+ln -s ~/.dotfiles/emacs/personal ~/.emacs.d/personal/
 ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el

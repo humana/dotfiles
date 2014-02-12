@@ -4,3 +4,4 @@
 [submodule "emacs/prelude"]
 	path = emacs/prelude
 	url = http://github.com/bbatsov/prelude
+	ignore = dirty
