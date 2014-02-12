@@ -1,14 +1,19 @@
+; make GC happen only every 20mbs
+(setq gc-cons-threshold 20000000)
+
 ;;; ============= Emacs goodies ===========
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el")
+;(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el")
 
 ;;; ============= Solarized ===============
-(require 'color-theme)
-(eval-after-load "color-theme"
- '(progn
-	(color-theme-initialize)))
-(add-to-list 'load-path "~/.dotfiles/solarized/emacs")
-(require 'color-theme-solarized)
-(color-theme-solarized-dark)
+;(require 'color-theme)
+;(eval-after-load "color-theme"
+; '(progn
+;	(color-theme-initialize)))
+;(add-to-list 'load-path "~/.dotfiles/solarized/emacs")
+;(require 'color-theme-solarized)
+;(color-theme-solarized-dark)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme 'solarized-dark t)
 
 ;;; ============= Geiser ==================
 (load-file "~/.emacs.d/geiser/elisp/geiser.el")
@@ -34,6 +39,7 @@
 	"f" 'find-file
 	"k" 'kill-buffer
 	"h" 'help-command
+	"m" 'helm-projectile
 	)
 
 ;(define-key evil-normal-state-map (kbd "C-???") 'execute-extended-command)
@@ -59,7 +65,10 @@
 (set-default-font "consolas 14")
 
 ; sane ctrl-h
-(define-key global-map "\C-h" 'backward-delete-char)
+;(define-key global-map "\C-h" 'backward-delete-char)
+; remap c-h to be backspace
+(keyboard-translate ?\C-h ?\C-?)
+
 
 ; smooth-scrolling like vim
 (setq	scroll-step             1
@@ -105,5 +114,29 @@
 (define-key evil-insert-state-map "\C-t" 'evil-shift-right-line)
 (define-key evil-insert-state-map "\C-d" 'evil-shift-left-line)
 
+;;; ============= Helm =====================
+(add-to-list 'load-path "~/.emacs.d/helm")
+(require 'helm-config)
+(helm-mode 1)
+
+;;; ============= Flx =====================
+(add-to-list 'load-path "~/.emacs.d/flx")
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
 
 
+;;; =========== Projectile ===============
+(add-to-list 'load-path "~/.emacs.d/s")
+(add-to-list 'load-path "~/.emacs.d/dash")
+(add-to-list 'load-path "~/.emacs.d/epl")
+(add-to-list 'load-path "~/.emacs.d/pkg-info")
+(add-to-list 'load-path "~/.emacs.d/grizzl")
+(add-to-list 'load-path "~/.emacs.d/projectile")
+(require 'projectile)
+(require 'helm-projectile)
+(projectile-global-mode)
+(setq projectile-completion-system 'grizzl)
