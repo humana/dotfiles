@@ -41,7 +41,8 @@ cp misc/gtk.css ~/.config/gtk-3.0/
 # tmux
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
-# emacs
-ln -s ~/.dotfiles/emacs ~/.emacs
-ln -s ~/.dotfiles/emacs.d ~/.emacs.d
-
+# emacs prelude
+ln -s ~/.dotfiles/emacs/prelude ~/.emacs.d
+rm -rf ~/.dotfiles/emacs/prelude/personal
+ln -s ~/.dotfiles/emacs/personal ~/.emacs.d
+ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el

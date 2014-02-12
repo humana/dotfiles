@@ -1,3 +1,6 @@
 [submodule "bundle/vundle"]
 	path = bundle/vundle
 	url = http://github.com/gmarik/vundle.git
+[submodule "emacs/prelude"]
+	path = emacs/prelude
+	url = http://github.com/bbatsov/prelude

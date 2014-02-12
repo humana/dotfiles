@@ -2,3 +2,4 @@ bak
 *.swp
 *.swo
 emacs.d/auto-save-list
+emacs/prelude
