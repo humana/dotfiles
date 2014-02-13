@@ -160,7 +160,7 @@ if [[ "$USER" == "root" ]]; then
 	style_user="\[${RED}\]"
 	prompt_char="#"
 fi
-PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$BASE0\]\$([[ -n \$(git branch 2> /dev/null) ]]) \[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]${prompt_char} \[$RESET\]"
+PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$RESET\]\$([[ -n \$(git branch 2> /dev/null) ]]) \[$YELLOW\]\$(parse_git_branch)\[$BASE0\]\[$RESET\]${prompt_char} \[$RESET\]"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
