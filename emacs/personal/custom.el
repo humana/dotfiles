@@ -14,7 +14,7 @@
 (evil-mode 1)
 
 ; leader keybindings
-(evil-leader/set-key 
+(evil-leader/set-key
 	"b" 'switch-to-buffer
 	"f" 'find-file
 	"k" 'kill-buffer
