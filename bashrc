@@ -240,6 +240,9 @@ export LD_LIBRARY_PATH=$ORACLE_HOME
 LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
 PATH=$LATEX_HOME:$PATH
 
+JSHINT_HOME=~/work/winston/node_modules/jshint/bin
+export PATH=$JSHINT_HOME:$PATH
+
 # local alias
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

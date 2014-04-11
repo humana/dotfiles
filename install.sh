@@ -11,19 +11,15 @@ if [ ! -d bak ]; then
 fi
 mv ~/.vim bak/
 mv ~/.vimrc bak/ 
-mv ~/.emacs bak/ 
 mv ~/.emacs.d bak/ 
 mv ~/.bashrc bak/
 mv ~/.bash_profile bak/
 mv ~/.gitconfig bak/
 
 # vim install
-if [ ! -d ~/.vim ]; then
-	mkdir ~/.vim
-fi
-cp -rdp ~/.dotfiles/bundle ~/.vim/
+ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
-vim +BundleInstall +qall
+mkdir -p ~/.dotfiles/vim/autoload ~/.dotfiles/vim/bundle
 
 # git
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig

@@ -1,29 +1,12 @@
-":so %
+":so % to reload config from vim
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 set nocompatible
-filetype off
 set hidden
-let mapleader=","
-
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-" let Vundle manage Vundle
-Bundle 'http://github.com/gmarik/vundle.git'
-Bundle 'http://github.com/vim-scripts/camelcasemotion.git'
-Bundle 'http://github.com/scrooloose/nerdtree.git'
-Bundle 'http://github.com/michaeljsmith/vim-indent-object.git'
-Bundle 'http://github.com/corntrace/bufexplorer.git'
-Bundle 'http://github.com/majutsushi/tagbar.git'
-Bundle 'http://github.com/vim-scripts/buftabs.git'
-Bundle 'http://github.com/altercation/vim-colors-solarized.git'
-Bundle 'http://github.com/stephenmckinney/vim-solarized-powerline.git'
-Bundle 'http://github.com/Lokaltog/vim-powerline'
-"Bundle 'http://github.com/othree/xml.vim'
-"Bundle 'http://github.com/scrooloose/syntastic.git'
-Bundle 'http://github.com/tpope/vim-fugitive.git'
-Bundle 'http://github.com/kien/ctrlp.vim.git'
-
 filetype plugin indent on " required
+let mapleader=","
 
 " set omnifunc=syntaxcomplete#Complete
 
@@ -115,20 +98,26 @@ nnoremap <right> <nop>
 
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
-:nmap <leader>e :Errors<CR>
-":nmap <leader>f :CtrlP<CR>
+":nmap <leader>e :Errors<CR>
 :nmap <leader>n :NERDTreeToggle<CR>
 
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
-" :cwindow to bring up quicfix window, navigation shortcuts below
-:nmap <leader>qf :botright cwindow<CR>
-:nmap [q :cprev<CR>
-:nmap ]q :cnext<CR>
-:nmap [a :lprev<CR>
-:nmap ]a :lnext<CR>
-" locally remap for a specific buffer
-":autocmd BufReadPost quickfix nnoremap <buffer> <C-n> :cnext<CR>
 
+" :cwindow to bring up quicfix window, navigation shortcuts below
+":nmap <leader>e :botright cwindow<CR>
+":nmap [q :cprev<CR>
+":nmap ]q :cnext<CR>
+
+" Syntastic
+:nmap <leader>sc :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+:nmap <leader>se :Errors<CR>
+:nmap [s :lprev<CR>
+:nmap ]s :lnext<CR>
+:nmap [S :lfirst<CR>
+:nmap ]S :llast<CR>
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_always_populate_loc_list = 1
 
