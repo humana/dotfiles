@@ -69,7 +69,7 @@ map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 " set cwd to current buffer path
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 " when moving up/down, don't line-wrap 
 :nmap j gj
@@ -98,12 +98,9 @@ nnoremap <right> <nop>
 
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
-":nmap <leader>e :Errors<CR>
 :nmap <leader>n :NERDTreeToggle<CR>
-
-let g:ctrlp_map = '<leader>f'
-let g:ctrlp_cmd = 'CtrlPBuffer'
-
+:nmap <leader>f :CtrlP<CR>
+:nmap <leader>b :CtrlPBuffer<CR>
 
 " :cwindow to bring up quicfix window, navigation shortcuts below
 ":nmap <leader>e :botright cwindow<CR>
@@ -117,7 +114,6 @@ let g:ctrlp_cmd = 'CtrlPBuffer'
 :nmap ]s :lnext<CR>
 :nmap [S :lfirst<CR>
 :nmap ]S :llast<CR>
-
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 
