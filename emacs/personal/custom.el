@@ -1,7 +1,7 @@
 ; make GC happen only every 20mbs
 (setq gc-cons-threshold 20000000)
 
-(prelude-require-packages '(solarized-theme evil evil-leader helm helm-projectile sicp))
+(prelude-require-packages '(solarized-theme evil evil-leader helm helm-projectile geiser sicp))
 
 
 (load-theme 'solarized-dark t)
@@ -43,6 +43,7 @@
 ; remap c-h to be backspace
 (keyboard-translate ?\C-h ?\C-?)
 
+
 ;; enter emacs state in insert mode }:)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
@@ -72,3 +73,6 @@
 ; this package is not downloading from MEPLA, install manually
 (require 'geiser)
 (require 'quack)
+
+;; smartparens
+(setq sp-show-pair-from-inside t) 
