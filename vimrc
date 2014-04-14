@@ -99,8 +99,9 @@ nnoremap <right> <nop>
 :nmap <leader>l :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
 :nmap <leader>n :NERDTreeToggle<CR>
-:nmap <leader>f :CtrlP<CR>
 :nmap <leader>b :CtrlPBuffer<CR>
+let g:ctrlp_map = ',f'
+let g:ctrlp_cmd = 'CtrlP'
 
 " :cwindow to bring up quicfix window, navigation shortcuts below
 ":nmap <leader>e :botright cwindow<CR>
