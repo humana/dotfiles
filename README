@@ -7,6 +7,9 @@ On systems where xterm-256colors is not available:
 	copy misc/xterm-256color.ti to remote host
 	on remote host run: tic xterm-256color.ti to generate to ~/.terminfo
 
+adding new vim plugins, e.g.:
+git submodule add -f https://github.com/vim-ruby/vim-ruby vim/bundle/vim-ruby
+
 
 Emacs (requires 24.3)
 ~~~~~~~~~~~~

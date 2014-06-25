@@ -75,6 +75,8 @@ nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 :nmap j gj
 :nmap k gk
 
+nnoremap P :pu<CR>
+
 noremap H ^
 noremap L $
 set ignorecase
