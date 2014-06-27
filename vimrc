@@ -120,3 +120,12 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 
+" shiftwidth softtabstop autoindent expandtab
+au FileType python setl sw=2 sts=2 et
+au FileType ruby setl ts=2 sw=2 sts=2 et ai
+
+" SLIMV
+let g:slimv_swank_cmd = '!racket ~/.dotfiles/tools/swank-racket/server.rkt &'
+
+
+

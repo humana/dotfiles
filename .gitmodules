@@ -47,3 +47,12 @@
 [submodule "vim/bundle/vim-endwise"]
 	path = vim/bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise
+[submodule "vim/bundle/youcompleteme"]
+	path = vim/bundle/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "vim/bundle/slimv"]
+	path = vim/bundle/slimv
+	url = https://github.com/vim-scripts/slimv.vim
+[submodule "tools/swank-racket"]
+	path = tools/swank-racket
+	url = https://github.com/dkvasnicka/swank-racket
