@@ -125,7 +125,9 @@ au FileType python setl sw=2 sts=2 et
 au FileType ruby setl ts=2 sw=2 sts=2 et ai
 
 " SLIMV
-let g:slimv_swank_cmd = '!racket ~/.dotfiles/tools/swank-racket/server.rkt &'
+" let g:slimv_swank_cmd = '!racket ~/.dotfiles/tools/swank-racket/server.rkt &'
+" let g:slimv_swank_cmd = '! gnome-terminal -e "sbcl --load /home/humana/.dotfiles/vim/bundle/slimv/slime/start-swank.lisp" &'
+let g:slimv_swank_cmd = '! SWANK_PORT=4005 gnome-terminal -e "scheme --eval \"(let loop() (start-swank) (loop))\"" &'
 
 
 

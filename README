@@ -10,6 +10,8 @@ On systems where xterm-256colors is not available:
 adding new vim plugins, e.g.:
 git submodule add -f https://github.com/vim-ruby/vim-ruby vim/bundle/vim-ruby
 
+remember to run :Helptags after installing a new plugin to generate documentation in Vim
+
 
 Emacs (requires 24.3)
 ~~~~~~~~~~~~
