@@ -15,12 +15,30 @@
 
 ; leader keybindings
 (evil-leader/set-key
-	"b" 'switch-to-buffer
-	"f" 'find-file
-	"k" 'kill-buffer
-	"h" 'help-command
-	"m" 'helm-projectile
-	)
+  "b" 'switch-to-buffer
+  "f" 'find-file
+  "k" 'kill-buffer
+  "h" 'help-command
+  "m" 'helm-projectile
+  "sfs" 'sp-forward-slurp-sexp
+  "sbs" 'sp-backward-slurp-sexp
+  "sfb" 'sp-forward-barf-sexp
+  "sbb" 'sp-backward-barf-sexp
+  "sk" 'sp-kill-sexp
+  "su" 'sp-unwrap-sexp
+)
+(evil-leader/set-key-for-mode 'emacs-lisp-mode
+  "ed" 'eval-defun
+  "eb" 'eval-buffer
+  "el" 'eval-last-sexp
+)
+(evil-leader/set-key-for-mode 'scheme-mode
+  "ed" 'geiser-eval-definition
+  "eb" 'geiser-eval-buffer
+  "el" (lambda () (interactive) (save-excursion
+         (unless (or (eobp) (eolp)) (forward-char))
+                 (geiser-eval-last-sexp nil)))
+)
 
 ;;; esc quits
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
@@ -36,6 +54,9 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-normal-state-map (kbd "gj") 'evil-next-line)
 (define-key evil-normal-state-map (kbd "gk") 'evil-previous-line)
+
+(define-key evil-normal-state-map "\C-n" 'evil-next-buffer)
+(define-key evil-normal-state-map "\C-p" 'evil-prev-buffer)
 
 ; font size
 (set-default-font "consolas 14")
@@ -75,4 +96,7 @@
 (require 'quack)
 
 ;; smartparens
-(setq sp-show-pair-from-inside t) 
+(setq sp-show-pair-from-inside t)
+
+; disable flyspell-mode
+(setq prelude-flyspell nil)
