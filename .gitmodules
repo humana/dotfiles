@@ -56,3 +56,6 @@
 [submodule "tools/swank-racket"]
 	path = tools/swank-racket
 	url = https://github.com/dkvasnicka/swank-racket
+[submodule "vim/bundle/rust.vim"]
+	path = vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim
