@@ -38,6 +38,7 @@
   "el" (lambda () (interactive) (save-excursion
          (unless (or (eobp) (eolp)) (forward-char))
                  (geiser-eval-last-sexp nil)))
+  "hm" 'geiser-doc-look-up-manual
 )
 
 ;;; esc quits
@@ -94,6 +95,10 @@
 ; this package is not downloading from MEPLA, install manually
 (require 'geiser)
 (require 'quack)
+
+;; geiser
+(setq geiser-active-implementations '(racket))
+
 
 ;; smartparens
 (setq sp-show-pair-from-inside t)

@@ -1,7 +1,8 @@
 bak
 *.swp
 *.swo
-vim/bundle
+vim/bundle*
+vim/bundle/*
 emacs.d/auto-save-list
 emacs/prelude/personal
 \#*#

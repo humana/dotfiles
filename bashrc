@@ -243,6 +243,11 @@ export LD_LIBRARY_PATH=$ORACLE_HOME
 LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
 PATH=$LATEX_HOME:$PATH
 
+export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
+
+export ELIXIR_HOME=~/opt/elixir
+export PATH=$ELIXIR_HOME/bin:$PATH
+
 # local alias
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -255,6 +260,7 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+
 
 if [ -f ~/.bashrc_local ]; then
 	. ~/.bashrc_local
