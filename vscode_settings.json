@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // The proxy setting to use. If not set will be taken from the http_proxy and https_proxy environment variables
+    "http.proxy": "http://localhost:3128",
+    // Whether the proxy server certificate should be verified against the list of supplied CAs.
+    "http.proxyStrictSSL": false,
+    // The value to send as the 'Proxy-Authorization' header for every network request.
+    "http.proxyAuthorization": null,
+    "vim.useCtrlKeys": true
+
+
+}

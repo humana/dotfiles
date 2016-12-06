@@ -42,3 +42,6 @@ ln -s ~/.dotfiles/emacs/prelude ~/.emacs.d
 rm -rf ~/.dotfiles/emacs/prelude/personal
 ln -s ~/.dotfiles/emacs/personal ~/.emacs.d/personal
 ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el
+
+# vscode
+ln -s ~/.dotfiles/vscode_settings.json ~/.config/Code/User/settings.json
