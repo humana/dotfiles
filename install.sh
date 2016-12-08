@@ -44,4 +44,5 @@ ln -s ~/.dotfiles/emacs/personal ~/.emacs.d/personal
 ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el
 
 # vscode
-ln -s ~/.dotfiles/vscode_settings.json ~/.config/Code/User/settings.json
+ln -s ~/.dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
+ln -s ~/.dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json

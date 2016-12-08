@@ -6,7 +6,6 @@
     "http.proxyStrictSSL": false,
     // The value to send as the 'Proxy-Authorization' header for every network request.
     "http.proxyAuthorization": null,
-    "vim.useCtrlKeys": true
-
-
+    "vim.useCtrlKeys": true,
+    "git.autofetch": false
 }
