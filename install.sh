@@ -21,6 +21,11 @@ ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 mkdir -p ~/.dotfiles/vim/autoload ~/.dotfiles/vim/bundle
 
+# neovim
+mkdir -p ~/.config
+ln -s ~/.dotfiles/vim ~/.config/nvim
+ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
+
 # git
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
@@ -46,3 +51,5 @@ ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el
 # vscode
 ln -s ~/.dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
 ln -s ~/.dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
+

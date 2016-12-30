@@ -62,3 +62,6 @@
 [submodule "vim/bundle/vim-elixir"]
 	path = vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "vim/bundle/oceanic-next"]
+	path = vim/bundle/oceanic-next
+	url = http://github.com/mhartington/oceanic-next

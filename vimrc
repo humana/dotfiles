@@ -10,12 +10,19 @@ let mapleader=","
 
 " set omnifunc=syntaxcomplete#Complete
 
-" solarized
-set t_Co=16 " some terminals seem to set this to 8, which breaks solarize
+"" solarized
+"set t_Co=16 " some terminals seem to set this to 8, which breaks solarize
+"syntax enable
+"set background=dark
+"let g:solarized_visibility='high'
+"colorscheme solarized
+
+" oceanic-next theme
+if (has("termguicolors"))
+ set termguicolors
+endif
 syntax enable
-set background=dark
-let g:solarized_visibility='high'
-colorscheme solarized
+colorscheme OceanicNext
 
 " Tabs are eight columns wide. Each indentation level is one tab.
 " :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
