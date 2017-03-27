@@ -7,5 +7,14 @@
     // The value to send as the 'Proxy-Authorization' header for every network request.
     "http.proxyAuthorization": null,
     "vim.useCtrlKeys": true,
-    "git.autofetch": false
+    "git.autofetch": false,
+	"files.associations": {
+		"*.vue": "vue",
+        "*.ipynb": "python"
+	},
+    "python.jupyter.defaultKernel": "python2",
+    "python.jupyter.startupCode": [
+        "%matplotlib inline"
+    ],
+    "python.jupyter.appendResults": true
 }

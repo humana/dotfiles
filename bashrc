@@ -247,6 +247,7 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 
 export ELIXIR_HOME=~/opt/elixir
 export PATH=$ELIXIR_HOME/bin:$PATH
+export JAVA_HOME=~/opt/jdk1.8.0_45
 
 # local alias
 if [ -f ~/.bash_aliases ]; then
@@ -265,3 +266,12 @@ fi
 if [ -f ~/.bashrc_local ]; then
 	. ~/.bashrc_local
 fi
+
+PATH="/home/work/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/work/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/work/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/work/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
+
+# added by Anaconda3 4.3.0 installer
+export PATH="/home/humana/opt/anaconda3/bin:$PATH"
