@@ -247,7 +247,8 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 
 export ELIXIR_HOME=~/opt/elixir
 export PATH=$ELIXIR_HOME/bin:$PATH
-export JAVA_HOME=~/opt/jdk1.8.0_45
+export JAVA_HOME=~/opt/jdk1.7.0_45
+
 
 # local alias
 if [ -f ~/.bash_aliases ]; then
