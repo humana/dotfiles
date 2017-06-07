@@ -56,5 +56,6 @@ ln -s ~/.dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/.dotfiles/latex/latexmkrc ~/.latexmkrc
 ln -s ~/.dotfiles/latex/texmf ~/texmf
 texhash
+texhash ~/texmf
 
 
