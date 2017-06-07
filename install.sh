@@ -52,7 +52,9 @@ ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el
 ln -s ~/.dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
 ln -s ~/.dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 
-# latexmk
-ln -s ~/.dotfiles/latexmkrc ~/.latexmkrc
+# latex
+ln -s ~/.dotfiles/latex/latexmkrc ~/.latexmkrc
+ln -s ~/.dotfiles/latex/texmf ~/texmf
+texhash
 
 
