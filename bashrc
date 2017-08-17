@@ -276,3 +276,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
 
 # added by Anaconda3 4.3.0 installer
 export PATH="/home/humana/opt/anaconda3/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
