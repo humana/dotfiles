@@ -275,3 +275,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
 
 # added by Anaconda3 4.3.0 installer
 export PATH="/home/humana/opt/anaconda3/bin:$PATH"
+
+export HTTP_PROXY=http://localhost:3128
+export HTTPS_PROXY=https://localhost:3128
