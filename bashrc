@@ -247,7 +247,8 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 
 export ELIXIR_HOME=~/opt/elixir
 export PATH=$ELIXIR_HOME/bin:$PATH
-export JAVA_HOME=~/opt/jdk1.8.0_45
+export JAVA_HOME=~/opt/jdk1.7.0_45
+
 
 # local alias
 if [ -f ~/.bash_aliases ]; then
@@ -273,8 +274,5 @@ PERL_LOCAL_LIB_ROOT="/home/work/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_RO
 PERL_MB_OPT="--install_base \"/home/work/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
 
-# added by Anaconda3 4.3.0 installer
-export PATH="/home/humana/opt/anaconda3/bin:$PATH"
-
-export HTTP_PROXY=http://localhost:3128
-export HTTPS_PROXY=https://localhost:3128
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
