@@ -1,12 +1,23 @@
 // Place your settings in this file to overwrite the default settings
 {
     // The proxy setting to use. If not set will be taken from the http_proxy and https_proxy environment variables
-    "http.proxy": "http://localhost:3128",
+//    "http.proxy": "http://localhost:3128",
     // Whether the proxy server certificate should be verified against the list of supplied CAs.
-    "http.proxyStrictSSL": false,
+ //   "http.proxyStrictSSL": false,
     // The value to send as the 'Proxy-Authorization' header for every network request.
-    "http.proxyAuthorization": null,
+  //  "http.proxyAuthorization": null,
     "vim.useCtrlKeys": true,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        }
+    ],
+    "editor.wordWrap": "on",
     "git.autofetch": false,
 	"files.associations": {
 		"*.vue": "vue",
@@ -16,5 +27,19 @@
     "python.jupyter.startupCode": [
         "%matplotlib inline"
     ],
-    "python.jupyter.appendResults": true
+    "python.jupyter.appendResults": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        }
+    ]
 }

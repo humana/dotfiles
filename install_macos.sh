@@ -49,14 +49,13 @@ ln -s ~/.dotfiles/emacs/personal ~/.emacs.d/personal
 ln -s ~/.dotfiles/emacs/prelude-modules.el ~/.emacs.d/prelude-modules.el
 
 # vscode
-mkdir -p ~/.config/Code/User
-ln -s ~/.dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
-ln -s ~/.dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+mkdir -p ~/Library/Application Support/Code/User/
+ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 # latex
-ln -s ~/.dotfiles/latex/latexmkrc ~/.latexmkrc
+ln -s ~/.dotfiles/latex/latexmkrc_macos ~/.latexmkrc
 ln -s ~/.dotfiles/latex/texmf ~/texmf
 texhash
 texhash ~/texmf
-
 
