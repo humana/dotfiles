@@ -19,16 +19,15 @@
     ],
     "editor.wordWrap": "on",
     "git.autofetch": false,
-	"files.associations": {
-		"*.vue": "vue",
+    "files.associations": {
+        "*.vue": "vue",
         "*.ipynb": "python"
-	},
+    },
     "python.jupyter.defaultKernel": "python2",
     "python.jupyter.startupCode": [
         "%matplotlib inline"
     ],
     "python.jupyter.appendResults": true,
-    "vim.disableAnnoyingNeovimMessage": true,
     "latex-workshop.latex.toolchain": [
         {
             "command": "latexmk",
@@ -40,6 +39,20 @@
                 "-pdf",
                 "%DOC%"
             ]
+        }
+    ],
+    "workbench.colorTheme": "Oceanic Next",
+    "editor.minimap.enabled": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue",
+        {
+            "language": "html",
+            "autoFix": true
         }
     ]
 }
