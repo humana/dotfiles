@@ -5,6 +5,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+unameOut="$(uname -s)"
+case "${unameOut}" in
+	Linux*)     machine=Linux;;
+	Darwin*)    machine=Mac;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -197,6 +204,8 @@ alias -- -="cd -"
 alias ll='ls -alF'
 alias lh='ls -ltrah'
 alias l='ls -ltr'
+alias vi='nvim'
+alias vim='nvim'
 
 alias diogenes=/usr/local/diogenes/perl/diogenes-server.pl
 
@@ -240,8 +249,6 @@ export ORACLE_HOME=~/opt/instantclient_11_2
 export PATH=$PATH:$ORACLE_HOME
 export LD_LIBRARY_PATH=$ORACLE_HOME
 
-LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
-PATH=$LATEX_HOME:$PATH
 
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
@@ -268,14 +275,23 @@ if [ -f ~/.bashrc_local ]; then
 	. ~/.bashrc_local
 fi
 
-PATH="/home/work/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/work/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/work/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/work/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
+if [ "$machine" == "Linux" ]; then
+	PATH="/home/work/perl5/bin${PATH:+:${PATH}}"; export PATH;
+	PERL5LIB="/home/work/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+	PERL_LOCAL_LIB_ROOT="/home/work/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+	PERL_MB_OPT="--install_base \"/home/work/perl5\""; export PERL_MB_OPT;
+	PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
 
-# added by Anaconda3 4.3.0 installer
-export PATH="/home/humana/opt/anaconda3/bin:$PATH"
+	# added by Anaconda3 4.3.0 installer
+	export PATH="/home/humana/opt/anaconda3/bin:$PATH"
+	
+	LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
+	PATH=$LATEX_HOME:$PATH
+fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+if [ "$machine" == "Mac" ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+	export MANPATH=$HOME/perl5/man:$MANPATH
+fi
