@@ -44,7 +44,7 @@
     "workbench.colorTheme": "Oceanic Next",
     "editor.minimap.enabled": true,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.disableAnnoyingNeovimMessage": true,
     "eslint.validate": [
         "javascript",
