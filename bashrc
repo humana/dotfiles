@@ -294,4 +294,5 @@ if [ "$machine" == "Mac" ]; then
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 	export MANPATH=$HOME/perl5/man:$MANPATH
+	export PATH=~/opt/mongodb/bin:$PATH
 fi
