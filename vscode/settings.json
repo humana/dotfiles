@@ -44,7 +44,7 @@
     "workbench.colorTheme": "Oceanic Next",
     "editor.minimap.enabled": true,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.disableAnnoyingNeovimMessage": true,
     "eslint.validate": [
         "javascript",
@@ -54,5 +54,14 @@
             "language": "html",
             "autoFix": true
         }
-    ]
+    ],
+    "cSpell.ignoreRegExpList": [
+        "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
+        "\\$.+?\\$",
+        "\\w*%.+"
+    ],
+    "cSpell.userWords": [
+        "anonymized"
+    ],
+    "extensions.ignoreRecommendations": false
 }
