@@ -292,7 +292,10 @@ fi
 if [ "$machine" == "Mac" ]; then
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
-	export MANPATH=$HOME/perl5/man:$MANPATH
+#	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+#	export MANPATH=$HOME/perl5/man:$MANPATH
 	export PATH=~/opt/mongodb/bin:$PATH
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+	export HADOOP_HOME=~/opt/hadoop-2.8.1
+	export PATH=~/anaconda/bin:$PATH
 fi
