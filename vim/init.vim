@@ -1,1 +1,1 @@
-/Users/work/.dotfiles/vimrc
+/Users/humana/.dotfiles/vimrc

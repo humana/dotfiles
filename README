@@ -20,3 +20,5 @@ plugins - geiser, for scheme/racket integration
 evil - for vi layer on emacs
 	in doc directory there is a pdf
 	C-z to switch between vim/emacs states
+
+Pathogen seems to break when it sees ftplugin directories (notably vimtex).  Consider moving to different package manager

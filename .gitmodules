@@ -65,6 +65,6 @@
 [submodule "vim/bundle/oceanic-next"]
 	path = vim/bundle/oceanic-next
 	url = http://github.com/mhartington/oceanic-next
-[submodule "vimtex"]
+[submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex

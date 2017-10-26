@@ -105,7 +105,7 @@ nnoremap <right> <nop>
 ":nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 ":nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
-":nmap <leader>l :setlocal number!<CR>
+":nmap <leader>t :setlocal number!<CR>
 :nmap <leader>p :set paste!<CR>
 :nmap <leader>n :NERDTreeToggle<CR>
 :nmap <leader>b :CtrlPBuffer<CR>
@@ -136,5 +136,5 @@ au FileType ruby setl ts=2 sw=2 sts=2 et ai
 " let g:slimv_swank_cmd = '! gnome-terminal -e "sbcl --load /home/humana/.dotfiles/vim/bundle/slimv/slime/start-swank.lisp" &'
 let g:slimv_swank_cmd = '! SWANK_PORT=4005 gnome-terminal -e "scheme --eval \"(let loop() (start-swank) (loop))\"" &'
 
-
+let g:tex_flavor = 'latex'
 
