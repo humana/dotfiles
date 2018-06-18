@@ -69,7 +69,8 @@
         "\\w*%.+"
     ],
     "cSpell.userWords": [
-        "anonymized"
+        "anonymized",
+        "visualisation"
     ],
     "extensions.ignoreRecommendations": false,
     "workbench.startupEditor": "newUntitledFile"
