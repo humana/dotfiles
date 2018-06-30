@@ -18,11 +18,11 @@ let mapleader=","
 "colorscheme solarized
 
 " oceanic-next theme
-if (has("termguicolors"))
- set termguicolors
-endif
+"if (has("termguicolors"))
+"	set termguicolors
+"endif
 syntax enable
-colorscheme OceanicNext
+"colorscheme OceanicNext
 
 " Tabs are eight columns wide. Each indentation level is one tab.
 " :set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab

@@ -297,7 +297,9 @@ if [ "$machine" == "Mac" ]; then
 	export PATH=~/opt/mongodb/bin:$PATH
 	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 	export HADOOP_HOME=~/opt/hadoop-2.8.1
-	export PATH=~/anaconda/bin:$PATH
+	#export PATH=~/anaconda/bin:$PATH
 	# git is too goddamn slow
 	PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$RESET\]\$ "
 fi
+
+export RSTUDIO_WHICH_R=/usr/local/bin/R

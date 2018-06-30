@@ -10,6 +10,9 @@
  //   "http.proxyStrictSSL": false,
     // The value to send as the 'Proxy-Authorization' header for every network request.
   //  "http.proxyAuthorization": null,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.leader": ",",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -23,12 +26,12 @@
         }
     ],
     "editor.wordWrap": "on",
-    "git.autofetch": false,
+    "git.autofetch": true,
     "files.associations": {
         "*.vue": "vue",
         "*.ipynb": "python"
     },
-    "python.jupyter.defaultKernel": "python2",
+    "python.jupyter.defaultKernel": "",
     "python.jupyter.startupCode": [
         "%matplotlib inline"
     ],
