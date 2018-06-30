@@ -12,7 +12,7 @@
   //  "http.proxyAuthorization": null,
     "vim.useCtrlKeys": true,
     "vim.leader": ",",
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["j"],
             "after": ["g", "j"]
@@ -33,20 +33,38 @@
         "%matplotlib inline"
     ],
     "python.jupyter.appendResults": true,
-    "latex-workshop.latex.toolchain": [
-        {
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-shell-escape",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "%DOC%"
-            ]
-        }
-    ],
-    "workbench.colorTheme": "Oceanic Next",
+    // "latex-workshop.latex.toolchain": [
+    //     {
+    //       "command": "pdflatex",
+    //       "args": [
+    //         "-synctex=1",
+    //         "-interaction=nonstopmode",
+    //         "-file-line-error",
+    //         "%DOC%"
+    //       ]
+    //     }, {
+    //       "command": "bibtex",
+    //       "args": [
+    //         "%DOCFILE%"
+    //       ]
+    //     }, {
+    //       "command": "pdflatex",
+    //       "args": [
+    //         "-synctex=1",
+    //         "-interaction=nonstopmode",
+    //         "-file-line-error",
+    //         "%DOC%"
+    //       ]
+    //     }, {
+    //       "command": "pdflatex",
+    //       "args": [
+    //         "-synctex=1",
+    //         "-interaction=nonstopmode",
+    //         "-file-line-error",
+    //         "%DOC%"
+    //       ]
+    //     }
+    //   ],
     "editor.minimap.enabled": true,
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
@@ -66,8 +84,31 @@
         "\\w*%.+"
     ],
     "cSpell.userWords": [
+        "Bayes",
+        "LSTM",
+        "analytics",
+        "aniello",
         "anonymized",
+        "backpropagation",
+        "bigram",
+        "bigrams",
+        "blogs",
+        "convolutional",
+        "denoising",
+        "emoticons",
+        "gmail",
+        "hashtags",
+        "hyperparameters",
+        "movie",
+        "scalability",
+        "subsampling",
+        "unigram",
+        "unigrams",
         "visualisation"
     ],
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "cSpell.language": "en-GB",
+    "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.update.show": false
 }
