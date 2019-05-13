@@ -8,7 +8,7 @@
 	"command": "jupyter.execCurrentCellAndAdvance"
 },
 {
-	"key": "ctrl+enter",
+	"key": "cmd+enter",
 	"command": "python.datascience.runcurrentcell"
 },
 {
