@@ -2,4 +2,18 @@
 	"key": "cmd+b",
 	"command": "HookyQR.beautify",
 	"when": "editorFocus"
-}]
+},
+{
+	"key": "shift+",
+	"command": "jupyter.execCurrentCellAndAdvance"
+},
+{
+	"key": "ctrl+enter",
+	"command": "python.datascience.runcurrentcell"
+},
+{
+	"key": "cmd+enter",
+	"command": "-editor.action.insertLineAfter",
+	"when": "editorTextFocus && !editorReadonly"
+}
+]

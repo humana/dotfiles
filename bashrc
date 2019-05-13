@@ -249,12 +249,13 @@ export ORACLE_HOME=~/opt/instantclient_11_2
 export PATH=$PATH:$ORACLE_HOME
 export LD_LIBRARY_PATH=$ORACLE_HOME
 
-
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
 export ELIXIR_HOME=~/opt/elixir
 export PATH=$ELIXIR_HOME/bin:$PATH
 export JAVA_HOME=~/opt/jdk1.7.0_45
+
+export RSTUDIO_WHICH_R=~/anaconda/bin/R
 
 
 # local alias
@@ -271,9 +272,6 @@ fi
 #fi
 
 
-if [ -f ~/.bashrc_local ]; then
-	. ~/.bashrc_local
-fi
 
 if [ "$machine" == "Linux" ]; then
 	PATH="/home/work/perl5/bin${PATH:+:${PATH}}"; export PATH;
@@ -283,13 +281,15 @@ if [ "$machine" == "Linux" ]; then
 	PERL_MM_OPT="INSTALL_BASE=/home/work/perl5"; export PERL_MM_OPT;
 
 	# added by Anaconda3 4.3.0 installer
-	export PATH="/home/humana/opt/anaconda3/bin:$PATH"
+#	export PATH="/home/humana/opt/anaconda3/bin:$PATH"
 	
 	LATEX_HOME=/usr/local/texlive/2012/bin/x86_64-linux
 	PATH=$LATEX_HOME:$PATH
 fi
 
 if [ "$machine" == "Mac" ]; then
+	export LANG=en_US.UTF-8
+	export LC_ALL=en_US.UTF-8
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 #	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
@@ -300,6 +300,11 @@ if [ "$machine" == "Mac" ]; then
 	#export PATH=~/anaconda/bin:$PATH
 	# git is too goddamn slow
 	PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$RESET\]\$ "
+
+	launchctl setenv RSTUDIO_WHICH_R $RSTUDIO_WHICH_R
 fi
 
-export RSTUDIO_WHICH_R=/usr/local/bin/R
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,8 +1,8 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.fontFamily": "'SF Mono', Monaco, 'Courier New', monospace",
+"editor.fontFamily": "'SF Mono', Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
-  "terminal.integrated.fontFamily": "'SF Mono'",
+"terminal.integrated.fontFamily": "'SFMono Nerd Font'",
   "terminal.integrated.fontSize": 14,
     // The proxy setting to use. If not set will be taken from the http_proxy and https_proxy environment variables
 //    "http.proxy": "http://localhost:3128",
@@ -113,5 +113,11 @@
     "cSpell.language": "en-GB",
     "workbench.colorTheme": "Oceanic Next (dimmed bg)",
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.message.update.show": false
+    "latex-workshop.message.update.show": false,
+    "jupyter.appendResults": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.shell.osx": "bash",
+    "git.confirmSync": false,
+    "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
 }
