@@ -4,12 +4,6 @@
   "editor.fontSize": 14,
 "terminal.integrated.fontFamily": "'SFMono Nerd Font'",
   "terminal.integrated.fontSize": 14,
-    // The proxy setting to use. If not set will be taken from the http_proxy and https_proxy environment variables
-//    "http.proxy": "http://localhost:3128",
-    // Whether the proxy server certificate should be verified against the list of supplied CAs.
- //   "http.proxyStrictSSL": false,
-    // The value to send as the 'Proxy-Authorization' header for every network request.
-  //  "http.proxyAuthorization": null,
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -31,47 +25,9 @@
         "*.vue": "vue",
         "*.ipynb": "python"
     },
-    "python.jupyter.defaultKernel": "",
-    "python.jupyter.startupCode": [
-        "%matplotlib inline"
-    ],
-    "python.jupyter.appendResults": true,
-    // "latex-workshop.latex.toolchain": [
-    //     {
-    //       "command": "pdflatex",
-    //       "args": [
-    //         "-synctex=1",
-    //         "-interaction=nonstopmode",
-    //         "-file-line-error",
-    //         "%DOC%"
-    //       ]
-    //     }, {
-    //       "command": "bibtex",
-    //       "args": [
-    //         "%DOCFILE%"
-    //       ]
-    //     }, {
-    //       "command": "pdflatex",
-    //       "args": [
-    //         "-synctex=1",
-    //         "-interaction=nonstopmode",
-    //         "-file-line-error",
-    //         "%DOC%"
-    //       ]
-    //     }, {
-    //       "command": "pdflatex",
-    //       "args": [
-    //         "-synctex=1",
-    //         "-interaction=nonstopmode",
-    //         "-file-line-error",
-    //         "%DOC%"
-    //       ]
-    //     }
-    //   ],
     "editor.minimap.enabled": true,
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.disableAnnoyingNeovimMessage": true,
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -81,43 +37,23 @@
             "autoFix": true
         }
     ],
-    "cSpell.ignoreRegExpList": [
-        "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
-        "\\$.+?\\$",
-        "\\w*%.+"
-    ],
-    "cSpell.userWords": [
-        "Bayes",
-        "LSTM",
-        "analytics",
-        "aniello",
-        "anonymized",
-        "backpropagation",
-        "bigram",
-        "bigrams",
-        "blogs",
-        "convolutional",
-        "denoising",
-        "emoticons",
-        "gmail",
-        "hashtags",
-        "hyperparameters",
-        "movie",
-        "scalability",
-        "subsampling",
-        "unigram",
-        "unigrams",
-        "visualisation"
-    ],
     "extensions.ignoreRecommendations": false,
-    "cSpell.language": "en-GB",
     "workbench.colorTheme": "Oceanic Next (dimmed bg)",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.message.update.show": false,
-    "jupyter.appendResults": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "terminal.integrated.shell.osx": "bash",
+    "terminal.integrated.shell.osx": "/bin/zsh",
     "git.confirmSync": false,
     "terminal.integrated.shell.linux": "/usr/local/bin/zsh",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    "terminal.integrated.scrollback": 100000,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.startupEditor": "welcomePage"
 }

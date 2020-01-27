@@ -227,35 +227,13 @@ alias emacs='emacs -nw'
 alias ctags='ctags-exuberant'
 
 # maven
-MAVEN_HOME=/usr/share/maven3
-PATH=$MAVEN_HOME/bin:$PATH
-
-# clang
-CLANG_BIN=~/opt/build/Release+Asserts/bin
-PATH=$CLANG_BIN:$PATH
-# clang tools
-SCANBUILD=~/opt/llvm/tools/clang/tools/scan-build
-SCANVIEW=~/opt/llvm/tools/clang/tools/scan-view
-PATH=$SCANBUILD:$SCANVIEW:$PATH
-
-# scala
-SBT_HOME=~/playpen/scala/sbt
-PATH=$SBT_HOME/bin:$PATH
-# racket
-RACKET_HOME=~/opt/racket
-PATH=$RACKET_HOME/bin:$PATH
 
 export ORACLE_HOME=~/opt/instantclient_11_2
 export PATH=$PATH:$ORACLE_HOME
 export LD_LIBRARY_PATH=$ORACLE_HOME
 
-export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
-
-export ELIXIR_HOME=~/opt/elixir
-export PATH=$ELIXIR_HOME/bin:$PATH
-export JAVA_HOME=~/opt/jdk1.7.0_45
-
-export RSTUDIO_WHICH_R=~/anaconda/bin/R
+#export RSTUDIO_WHICH_R=~/anaconda/bin/R
+export RSTUDIO_WHICH_R=/Library/Frameworks/R.framework/Versions/Current/Resources/R
 
 
 # local alias
@@ -292,12 +270,7 @@ if [ "$machine" == "Mac" ]; then
 	export LC_ALL=en_US.UTF-8
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-#	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
-#	export MANPATH=$HOME/perl5/man:$MANPATH
-	export PATH=~/opt/mongodb/bin:$PATH
 	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-	export HADOOP_HOME=~/opt/hadoop-2.8.1
-	#export PATH=~/anaconda/bin:$PATH
 	# git is too goddamn slow
 	PS1="${style_user}\u\[$RESET\]@\[$CYAN\]\h \[$BLUE\]\w\[$RESET\]\$ "
 
