@@ -15,5 +15,8 @@
 	"key": "cmd+enter",
 	"command": "-editor.action.insertLineAfter",
 	"when": "editorTextFocus && !editorReadonly"
-}
+},
+{ "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
+{ "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}
 ]
+

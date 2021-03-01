@@ -55,5 +55,15 @@
     ],
     "terminal.integrated.scrollback": 100000,
     "latex-workshop.view.pdf.viewer": "tab",
-    "workbench.startupEditor": "welcomePage"
+    "workbench.startupEditor": "welcomePage",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "black",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
