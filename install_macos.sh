@@ -53,6 +53,10 @@ mkdir -p ~/Library/Application Support/Code/User/
 ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
+# jupyter notebook
+mkdir -p ~/.jupyter/nbconfig
+ln -s ~/.dotfiles/jupyter/notebook.json ~/.jupyter/nbconfig/notebook.json
+
 # latex
 ln -s ~/.dotfiles/latex/latexmkrc_macos ~/.latexmkrc
 ln -s ~/.dotfiles/latex/texmf ~/texmf

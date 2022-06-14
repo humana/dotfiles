@@ -117,14 +117,13 @@ export LC_ALL=en_US.UTF-8
 export NVM_DIR="$HOME/.nvm"
 
 # NVM makes zsh load time very slow, so just explicitly do this when required
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+#alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
 #	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 #	export MANPATH=$HOME/perl5/man:$MANPATH
 export PATH=~/opt/mongodb/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-export PATH=~/anaconda/bin:$PATH
 
 #launchctl setenv RSTUDIO_WHICH_R $RSTUDIO_WHICH_R
 
@@ -149,4 +148,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda config --set auto_activate_base false
+
+
+# poetry
+export PATH=~/.local/bin:$PATH
+# anaconda
+export PATH=$PATH:~/anaconda/bin
+
+# pyenv
+eval "$(pyenv init -)"
 

@@ -1,0 +1,17 @@
+{
+  "load_extensions": {
+    "vim_binding/vim_binding": true,
+    "jupyter-black-master/jupyter-black": true,
+    "jupyter-isort-master/jupyter-isort": false,
+    "jupyter-js-widgets/extension": true
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": false
+    }
+  },
+  "Notebook": {
+    "Toolbar": true,
+    "Header": true
+  }
+}

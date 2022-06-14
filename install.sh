@@ -26,6 +26,9 @@ mkdir -p ~/.config
 ln -s ~/.dotfiles/vim ~/.config/nvim
 ln -s ~/.dotfiles/vimrc ~/.config/nvim/init.vim
 
+# ideavim for pycharm
+ln -s ~/.dotfiles/ideavimrc ~/.ideavimrc
+
 # git
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 
