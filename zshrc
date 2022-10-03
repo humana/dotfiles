@@ -1,4 +1,9 @@
+# To profile slow zsh loads, uncomment:
+# zmodload zsh/zprof
+# and run zprof after loading a new shell
+
 ZSH_DISABLE_COMPFIX=true
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -69,6 +74,8 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-nvm
+  npm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,47 +121,30 @@ alias gx='gitx --all'
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
 export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
 
+## stuff that can probably be cleared out
 # NVM makes zsh load time very slow, so just explicitly do this when required
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 #alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
-
 #	eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 #	export MANPATH=$HOME/perl5/man:$MANPATH
-export PATH=~/opt/mongodb/bin:$PATH
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 #launchctl setenv RSTUDIO_WHICH_R $RSTUDIO_WHICH_R
-
 
 # bash like tab completion
 setopt noautomenu
 setopt nomenucomplete
 #setopt +o menucomplete
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/work/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/work/anaconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/work/anaconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/work/anaconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-conda config --set auto_activate_base false
-
+export PATH="/Users/work/anaconda3/bin:$PATH"
+#conda config --set auto_activate_base false
 
 # poetry
 export PATH=~/.local/bin:$PATH
-# anaconda
-export PATH=$PATH:~/anaconda/bin
 
 # pyenv
 eval "$(pyenv init -)"
-

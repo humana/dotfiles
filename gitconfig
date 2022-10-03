@@ -17,3 +17,5 @@
 	ui = true
 
         jummp
+[init]
+	defaultBranch = master
